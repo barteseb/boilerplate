@@ -1,8 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import AppChild from './appChild';
 
 const App: React.FC = () => {
+    const clickExample = (textString: string) => {
+        alert(textString)
+    }
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +22,8 @@ const App: React.FC = () => {
         >
           Learn React
         </a>
+        Child To Parent
+        <AppChild handler={() => clickExample('####')} />
       </header>
     </div>
   );
